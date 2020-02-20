@@ -1,0 +1,29 @@
+@import "./colors.scss";
+
+.btn.btn-dark-green {
+  background-color: $color-sja-dark-green;
+  color: $color-sja-white;
+}
+
+.btn.btn-dark-green:hover {
+  background-color: $color-sja-light-green;
+  color: $color-sja-white;
+}
+
+.btn.btn-light-green {
+  background-color: $color-sja-light-green;
+  color: $color-sja-white;
+}
+
+.btn.btn-light-green:hover {
+  background-color: $color-sja-gray;
+  color: $color-sja-black;
+}
+
+.btn-row {
+  text-align: center;
+}
+
+.btn-row .btn + .btn {
+  margin-left: 10px;
+}

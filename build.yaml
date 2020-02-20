@@ -1,0 +1,58 @@
+resources:
+- repo: self
+
+variables:
+  major: 1
+  minor: 0
+
+name: $(major).$(minor).$(rev:r)
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+
+- task: Npm@1
+  displayName: 'npm ci --production'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'ci --production'
+
+- task: Npm@1
+  displayName: 'npm run test:ci'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run test:ci'
+  env:
+    CI: "true"
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results junit.xml'
+  inputs:
+    testResultsFiles: junit.xml
+  condition: succeededOrFailed()
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage from $(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+  condition: succeededOrFailed()
+
+- task: Npm@1
+  displayName: 'npm run build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
+  env:
+    CI: "true"
+      
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: client-drop'
+  inputs:
+    PathtoPublish: build
+    ArtifactName: 'client-drop'

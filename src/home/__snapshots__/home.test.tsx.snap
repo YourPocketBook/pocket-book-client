@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page renders correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+    </nav>
+    <div
+      class="centreContainer container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-6 offset-lg-3"
+        >
+          <div
+            class="centreBox"
+          >
+            <div
+              class="container"
+            >
+              <div
+                class="row"
+              >
+                <div
+                  class="col"
+                >
+                  <h1
+                    class="text-center"
+                  >
+                    Pocket Book
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="row"
+              >
+                <div
+                  class="col"
+                >
+                  <p>
+                    Welcome to Pocket Book. You will need an account to access this site.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="row"
+              >
+                <div
+                  class="col-sm-4 offset-sm-2"
+                >
+                  <a
+                    class="btn btn-dark-green btn-block"
+                    href="/register"
+                    id="register-button"
+                  >
+                    Register
+                  </a>
+                </div>
+                <div
+                  class="col-sm-4"
+                >
+                  <a
+                    class="btn btn-dark-green btn-block"
+                    href="/login"
+                    id="log-in-button"
+                  >
+                    Log In
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Home Page renders correctly when offline 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+    </nav>
+    <div
+      class="centreContainer container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-6 offset-lg-3"
+        >
+          <div
+            class="centreBox"
+          >
+            <div
+              class="container"
+            >
+              <div
+                class="alert alert-dark fade"
+                role="alert"
+              >
+                You appear to be offline.
+              </div>
+              <div
+                class="row"
+              >
+                <div
+                  class="col"
+                >
+                  <h1
+                    class="text-center"
+                  >
+                    Pocket Book
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="row"
+              >
+                <div
+                  class="col"
+                >
+                  <p>
+                    Welcome to Pocket Book. You will need an account to access this site.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="row"
+              >
+                <div
+                  class="col-sm-4 offset-sm-2"
+                >
+                  <a
+                    class="btn btn-dark-green btn-block disabled"
+                    href="/register"
+                    id="register-button"
+                  >
+                    Register
+                  </a>
+                </div>
+                <div
+                  class="col-sm-4"
+                >
+                  <a
+                    class="btn btn-dark-green btn-block disabled"
+                    href="/login"
+                    id="log-in-button"
+                  >
+                    Log In
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

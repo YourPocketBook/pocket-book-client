@@ -1,0 +1,769 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Medications Home renders cached results correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg text-capitalize"
+                      href="/medication/1"
+                    >
+                      test 1
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg text-capitalize"
+                      href="/medication/2"
+                    >
+                      test 2
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medications Home renders failed to load correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="btn btn-dark-green btn-block btn-lg"
+                    >
+                      Failed to get Medications
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medications Home renders failed to load correctly when fetch throws 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="btn btn-dark-green btn-block btn-lg"
+                    >
+                      Failed to get Medications
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medications Home renders loading correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="btn btn-dark-green btn-block btn-lg btn-disabled"
+                    >
+                      Loading...
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medications Home renders no medications correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="btn btn-dark-green btn-block btn-lg"
+                    >
+                      No Medications
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medications Home renders results correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-lg-6 offset-lg-3"
+          >
+            <div
+              class="dashboardBackground"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <h1
+                      class="text-center"
+                    >
+                      Medications
+                    </h1>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg text-capitalize"
+                      href="/medication/1"
+                    >
+                      test 1
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg text-capitalize"
+                      href="/medication/2"
+                    >
+                      test 2
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="dashboardButton row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <a
+                      class="btn btn-dark-green btn-block btn-lg"
+                      href="/home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

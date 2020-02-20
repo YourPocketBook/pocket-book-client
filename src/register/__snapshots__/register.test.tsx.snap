@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Page renders correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+    </nav>
+    <div
+      class="centreContainer container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-6 offset-lg-3"
+        >
+          <div
+            class="centreBox"
+          >
+            <div
+              class="container"
+            >
+              <div
+                class="row"
+              >
+                <div
+                  class="col"
+                >
+                  <h1
+                    class="text-center"
+                  >
+                    Register
+                  </h1>
+                </div>
+              </div>
+              <form
+                class=""
+                id="register-form"
+                novalidate=""
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <label
+                        class=""
+                        for="name"
+                      >
+                        Name
+                      </label>
+                      <input
+                        autocomplete="name"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        class="invalid-feedback"
+                      >
+                        You need to give your name.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <label
+                        class=""
+                        for="email"
+                      >
+                        Email
+                      </label>
+                      <input
+                        autocomplete="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        value=""
+                      />
+                      <div
+                        class="invalid-feedback"
+                      >
+                        You need to give your SJA email
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <label
+                        class=""
+                        for="password"
+                      >
+                        Password
+                      </label>
+                      <input
+                        autocomplete="new-password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <div
+                        class="invalid-feedback"
+                      >
+                        You need to enter a password.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="text-right col-md-9 offset-md-3"
+                  >
+                    <button
+                      class="text-muted btn btn-link"
+                      id="showPassword"
+                      type="button"
+                    >
+                      Show Password
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="form-check"
+                >
+                  <label
+                    class="form-check-label"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="acceptPrivacy"
+                      type="checkbox"
+                    />
+                    I have read and accept the
+                     
+                    <a
+                      class=""
+                      href="/privacy"
+                    >
+                      Privacy Policy
+                    </a>
+                    .
+                    <div
+                      class="invalid-feedback"
+                    >
+                      You can't register if you don't accept this policy.
+                    </div>
+                  </label>
+                </div>
+                <div
+                  class="form-check"
+                >
+                  <label
+                    class="form-check-label"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="acceptTerms"
+                      type="checkbox"
+                    />
+                    I have read and accept the
+                     
+                    <a
+                      class=""
+                      href="/privacy"
+                    >
+                      Terms and Conditions of Use
+                    </a>
+                    .
+                    <div
+                      class="invalid-feedback"
+                    >
+                      You can't register if you don't accept this policy.
+                    </div>
+                  </label>
+                </div>
+                <div
+                  class="form-check"
+                >
+                  <label
+                    class="text-small form-check-label"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="acceptEmails"
+                      type="checkbox"
+                    />
+                    I consent to receive occasional emails when this site is updated. This is optional.
+                  </label>
+                </div>
+                <button
+                  class="btn btn-dark-green btn-block"
+                  type="submit"
+                >
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+@import "../styles/colors.scss";
+
+.showButton {
+  border: none;
+  background: none;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  color: $color-sja-gray;
+}
+
+.showButton:hover {
+  text-decoration: underline;
+  color: $color-sja-black;
+}
+
+.suggestionList {
+  color: $color-sja-gray;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.suggestionList ul {
+  margin-top: 2.5px;
+}

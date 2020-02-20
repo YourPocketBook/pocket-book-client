@@ -1,0 +1,15 @@
+@import "../styles/colors.scss";
+
+.background {
+  background-color: $color-sja-dark-green;
+  min-height: 100vh;
+  position: relative;
+  padding: 10px;
+}
+
+.centreBox {
+  background-color: $color-sja-white;
+  width: calc(100%-20px);
+  border-radius: 5px;
+  padding: 10px;
+}

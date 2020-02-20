@@ -1,0 +1,23 @@
+@import "../styles/colors.scss";
+
+.background {
+  background-color: $color-sja-dark-green;
+  min-height: 100vh;
+  position: relative;
+}
+
+.centreContainer {
+  padding-top: 10px;
+  padding-bottom: 110px;
+}
+
+@media (min-width: 584px) {
+  .centreContainer {
+    padding-bottom: 65px;
+  }
+}
+
+.footer,
+.navbar {
+  background-color: $color-sja-light-green;
+}

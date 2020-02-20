@@ -1,0 +1,599 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit Medication Page renders loaded correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="formBackground container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <h1
+              class="text-center"
+            >
+              Edit Medication
+            </h1>
+          </div>
+        </div>
+        <form
+          novalidate=""
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  autocomplete="off"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  type="text"
+                  value="Test Name"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the name of the medication.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="policyDate"
+                >
+                  Policy Date
+                </label>
+                <input
+                  autocomplete="off"
+                  class="form-control"
+                  id="policyDate"
+                  name="policyDate"
+                  placeholder="Policy Date"
+                  type="date"
+                  value="2019-12-10"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the date of the policy this is taken from.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="h5"
+          >
+            Clinical Condition
+          </h2>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="indications"
+                >
+                  Indications
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="indications"
+                  name="indications"
+                  placeholder="Indications"
+                >
+                  Test Indications
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the indications for the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Indications
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="inclusionCriteria"
+                >
+                  Inclusion Criteria
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="inclusionCriteria"
+                  name="inclusionCriteria"
+                  placeholder="Inclusion Criteria"
+                >
+                  Test Inclusion
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the inclusion criteria for the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Inclusion
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="exclusionCriteria"
+                >
+                  Exclusion Criteria
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="exclusionCriteria"
+                  name="exclusionCriteria"
+                  placeholder="Exclusion Criteria"
+                >
+                  Test Exclusion
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the exclusion criteria for the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Exclusion
+              </p>
+            </div>
+          </div>
+          <h2
+            class="h5"
+          >
+            Medicine Details
+          </h2>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="form"
+                >
+                  Name, Forms and Strengths of Medicine
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="form"
+                  name="form"
+                  placeholder="Name, Forms and Strengths of Medicine"
+                >
+                  Test Form
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the name, forms and strengths of the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Form
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="route"
+                >
+                  Route or Method
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="route"
+                  name="route"
+                  placeholder="Route or Method"
+                >
+                  Test Route
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the route or method for the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Route
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="dose"
+                >
+                  Dosage
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="dose"
+                  name="dose"
+                  placeholder="Dosage"
+                >
+                  Test Dose
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the dose for the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Dose
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="sideEffects"
+                >
+                  Side Effects
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="sideEffects"
+                  name="sideEffects"
+                  placeholder="Side Effects"
+                >
+                  Test Side Effects
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the side effects of the medication.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Side Effects
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="adviceIfTaken"
+                >
+                  Advice if Taken
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="adviceIfTaken"
+                  name="adviceIfTaken"
+                  placeholder="Advice if Taken"
+                >
+                  Test Advice 2
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the advice to give if the medication is taken.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Advice 2
+              </p>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md"
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class=""
+                  for="adviceIfDeclined"
+                >
+                  Advice if Declined
+                </label>
+                <textarea
+                  autocomplete="off"
+                  class="h-100 form-control"
+                  id="adviceIfDeclined"
+                  name="adviceIfDeclined"
+                  placeholder="Advice if Declined"
+                >
+                  Test Advice 1
+                </textarea>
+                <div
+                  class="invalid-feedback"
+                >
+                  You need to enter the advice to give if the medication is declined.
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md"
+            >
+              <p>
+                Test Advice 1
+              </p>
+            </div>
+          </div>
+          <button
+            class="btn btn-dark-green btn-block"
+            type="submit"
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Edit Medication Page renders loading correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="formBackground container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <h1
+              class="text-center"
+            >
+              Edit Medication
+            </h1>
+          </div>
+        </div>
+        <div>
+          One moment please...
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

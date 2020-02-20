@@ -1,0 +1,1082 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Medication Detail Page renders cached results correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <a
+                  class="btn btn-link text-decorate-underline"
+                  href="/medications"
+                >
+                  Go back...
+                </a>
+              </div>
+              <div
+                class="col"
+              >
+                <h1
+                  class="text-capitalize"
+                >
+                  test name
+                </h1>
+              </div>
+              <div
+                class="col"
+              />
+            </div>
+            <h2>
+              Clinical Condition
+            </h2>
+            <h3>
+              Indication
+            </h3>
+            <p>
+              Test Indications
+            </p>
+            <h3>
+              Inclusion Criteria
+            </h3>
+            <p>
+              Test Inclusion
+            </p>
+            <h3>
+              Exclusion Criteria
+            </h3>
+            <p>
+              Test Exclusion
+            </p>
+            <h2>
+              Medicine Details
+            </h2>
+            <h3>
+              Name, Form and Strength of Medicine
+            </h3>
+            <p>
+              Test Form
+            </p>
+            <h3>
+              Route or Method
+            </h3>
+            <p>
+              Test Route
+            </p>
+            <h3>
+              Dosage
+            </h3>
+            <p>
+              Test Dose
+            </p>
+            <h3>
+              Side Effects
+            </h3>
+            <p>
+              Test Side Effects
+            </p>
+            <h3>
+              Advice to Patient and/or Carer
+            </h3>
+            <p>
+              Test Advice 2
+            </p>
+            <h3>
+              Advice if Patient Declines or is Excluded
+            </h3>
+            <p>
+              Test Advice 1
+            </p>
+            <h2>
+              Audit Trail
+            </h2>
+            <h3>
+              Records
+            </h3>
+            <p>
+              All details should be recorded on the Patient Report Form and any adverse reactions reported via the Incident Management Framework.
+            </p>
+            <footer>
+              Taken from Medications Administration Directives dated 10 Sep 2018.
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders failed to load correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <h1>
+              Error Loading Medication
+            </h1>
+            <p>
+              We weren't able to load that medication. Try refreshing the page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders failed to load correctly when fetch throws 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <h1>
+              Error Loading Medication
+            </h1>
+            <p>
+              We weren't able to load that medication. Try refreshing the page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders loading correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <div>
+              Loading...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders no policy date result correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <a
+                  class="btn btn-link text-decorate-underline"
+                  href="/medications"
+                >
+                  Go back...
+                </a>
+              </div>
+              <div
+                class="col"
+              >
+                <h1
+                  class="text-capitalize"
+                >
+                  test name
+                </h1>
+              </div>
+              <div
+                class="col"
+              />
+            </div>
+            <h2>
+              Clinical Condition
+            </h2>
+            <h3>
+              Indication
+            </h3>
+            <p>
+              Test Indications
+            </p>
+            <h3>
+              Inclusion Criteria
+            </h3>
+            <p>
+              Test Inclusion
+            </p>
+            <h3>
+              Exclusion Criteria
+            </h3>
+            <p>
+              Test Exclusion
+            </p>
+            <h2>
+              Medicine Details
+            </h2>
+            <h3>
+              Name, Form and Strength of Medicine
+            </h3>
+            <p>
+              Test Form
+            </p>
+            <h3>
+              Route or Method
+            </h3>
+            <p>
+              Test Route
+            </p>
+            <h3>
+              Dosage
+            </h3>
+            <p>
+              Test Dose
+            </p>
+            <h3>
+              Side Effects
+            </h3>
+            <p>
+              Test Side Effects
+            </p>
+            <h3>
+              Advice to Patient and/or Carer
+            </h3>
+            <p>
+              Test Advice 2
+            </p>
+            <h3>
+              Advice if Patient Declines or is Excluded
+            </h3>
+            <p>
+              Test Advice 1
+            </p>
+            <h2>
+              Audit Trail
+            </h2>
+            <h3>
+              Records
+            </h3>
+            <p>
+              All details should be recorded on the Patient Report Form and any adverse reactions reported via the Incident Management Framework.
+            </p>
+            <footer />
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders partial cached results correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <a
+                  class="btn btn-link text-decorate-underline"
+                  href="/medications"
+                >
+                  Go back...
+                </a>
+              </div>
+              <div
+                class="col"
+              >
+                <h1
+                  class="text-capitalize"
+                >
+                  test name
+                </h1>
+              </div>
+              <div
+                class="col"
+              />
+            </div>
+            <h2>
+              Clinical Condition
+            </h2>
+            <h3>
+              Indication
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Inclusion Criteria
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Exclusion Criteria
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h2>
+              Medicine Details
+            </h2>
+            <h3>
+              Name, Form and Strength of Medicine
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Route or Method
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Dosage
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Side Effects
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Advice to Patient and/or Carer
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h3>
+              Advice if Patient Declines or is Excluded
+            </h3>
+            <span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+              <span
+                class="css-19bon8n react-loading-skeleton"
+                style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+              >
+                ‌
+              </span>
+            </span>
+            <h2>
+              Audit Trail
+            </h2>
+            <h3>
+              Records
+            </h3>
+            <p>
+              All details should be recorded on the Patient Report Form and any adverse reactions reported via the Incident Management Framework.
+            </p>
+            <footer />
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Medication Detail Page renders results correctly 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <nav
+      class="navbar navbar"
+    >
+      <a
+        class="navbar-brand"
+      >
+        PocketBook
+      </a>
+      <span
+        class="navbar-text"
+      >
+        Hi, 
+        Test User
+      </span>
+    </nav>
+    <div
+      class="centreContainer"
+    >
+      <div
+        class="background"
+      >
+        <div
+          class="centreBox"
+        >
+          <div
+            class="p"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <a
+                  class="btn btn-link text-decorate-underline"
+                  href="/medications"
+                >
+                  Go back...
+                </a>
+              </div>
+              <div
+                class="col"
+              >
+                <h1
+                  class="text-capitalize"
+                >
+                  test name
+                </h1>
+              </div>
+              <div
+                class="col"
+              />
+            </div>
+            <h2>
+              Clinical Condition
+            </h2>
+            <h3>
+              Indication
+            </h3>
+            <p>
+              Test Indications
+            </p>
+            <h3>
+              Inclusion Criteria
+            </h3>
+            <p>
+              Test Inclusion
+            </p>
+            <h3>
+              Exclusion Criteria
+            </h3>
+            <p>
+              Test Exclusion
+            </p>
+            <h2>
+              Medicine Details
+            </h2>
+            <h3>
+              Name, Form and Strength of Medicine
+            </h3>
+            <p>
+              Test Form
+            </p>
+            <h3>
+              Route or Method
+            </h3>
+            <p>
+              Test Route
+            </p>
+            <h3>
+              Dosage
+            </h3>
+            <p>
+              Test Dose
+            </p>
+            <h3>
+              Side Effects
+            </h3>
+            <p>
+              Test Side Effects
+            </p>
+            <h3>
+              Advice to Patient and/or Carer
+            </h3>
+            <p>
+              Test Advice 2
+            </p>
+            <h3>
+              Advice if Patient Declines or is Excluded
+            </h3>
+            <p>
+              Test Advice 1
+            </p>
+            <h2>
+              Audit Trail
+            </h2>
+            <h3>
+              Records
+            </h3>
+            <p>
+              All details should be recorded on the Patient Report Form and any adverse reactions reported via the Incident Management Framework.
+            </p>
+            <footer>
+              Taken from Medications Administration Directives dated 10 Sep 2018.
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="fixed-bottom footer navbar"
+    >
+      <span
+        class="navbar-text"
+      >
+        Design Copyright © 
+        2020
+         Tony Richards.
+      </span>
+      <ul
+        class="nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/privacy"
+          >
+            Privacy Policy
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link text-dark"
+            href="/tsandcs"
+          >
+            Terms of Use
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
