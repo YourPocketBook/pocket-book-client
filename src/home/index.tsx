@@ -4,7 +4,6 @@ import Col from "reactstrap/lib/Col";
 import Container from "reactstrap/lib/Container";
 import Row from "reactstrap/lib/Row";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
-import { Link } from "../link";
 import { login } from "../ms-login";
 import { OfflineNotice } from "../offlineNotice";
 import { PublicPage } from "../public-page";
@@ -36,23 +35,13 @@ export function Home() {
         <Row>
           <Col>
             <p>
-              Welcome to Pocket Book. You will need an account to access this
-              site.
+              Welcome to Pocket Book. You will need a St John Ambulance account
+              to access this site.
             </p>
           </Col>
         </Row>
         <Row>
-          <Col sm={{ size: 4, offset: 2 }}>
-            <Link
-              className="btn btn-dark-green btn-block"
-              disabled={!isOnline}
-              href="/register"
-              id="register-button"
-            >
-              Register
-            </Link>
-          </Col>
-          <Col sm={{ size: 4 }}>
+          <Col>
             <Button
               className="btn btn-dark-green btn-block"
               disabled={!isOnline}

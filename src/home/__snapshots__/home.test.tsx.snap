@@ -49,7 +49,7 @@ exports[`Home Page renders correctly 1`] = `
                   class="col"
                 >
                   <p>
-                    Welcome to Pocket Book. You will need an account to access this site.
+                    Welcome to Pocket Book. You will need a St John Ambulance account to access this site.
                   </p>
                 </div>
               </div>
@@ -57,26 +57,15 @@ exports[`Home Page renders correctly 1`] = `
                 class="row"
               >
                 <div
-                  class="col-sm-4 offset-sm-2"
+                  class="col"
                 >
-                  <a
-                    class="btn btn-dark-green btn-block"
-                    href="/register"
-                    id="register-button"
-                  >
-                    Register
-                  </a>
-                </div>
-                <div
-                  class="col-sm-4"
-                >
-                  <a
-                    class="btn btn-dark-green btn-block"
-                    href="/login"
+                  <button
+                    class="btn btn-dark-green btn-block btn btn-secondary"
                     id="log-in-button"
+                    type="button"
                   >
                     Log In
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -178,7 +167,7 @@ exports[`Home Page renders correctly when offline 1`] = `
                   class="col"
                 >
                   <p>
-                    Welcome to Pocket Book. You will need an account to access this site.
+                    Welcome to Pocket Book. You will need a St John Ambulance account to access this site.
                   </p>
                 </div>
               </div>
@@ -186,26 +175,16 @@ exports[`Home Page renders correctly when offline 1`] = `
                 class="row"
               >
                 <div
-                  class="col-sm-4 offset-sm-2"
+                  class="col"
                 >
-                  <a
-                    class="btn btn-dark-green btn-block disabled"
-                    href="/register"
-                    id="register-button"
-                  >
-                    Register
-                  </a>
-                </div>
-                <div
-                  class="col-sm-4"
-                >
-                  <a
-                    class="btn btn-dark-green btn-block disabled"
-                    href="/login"
+                  <button
+                    class="btn btn-dark-green btn-block btn btn-secondary disabled"
+                    disabled=""
                     id="log-in-button"
+                    type="button"
                   >
                     Log In
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

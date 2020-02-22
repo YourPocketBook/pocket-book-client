@@ -77,20 +77,6 @@ exports[`Dashboard Page renders correctly when offline 1`] = `
                   <div
                     class="col"
                   >
-                    <a
-                      class="btn btn-dark-green btn-block btn-lg"
-                      href="/account"
-                    >
-                      Your Account
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="dashboardButton row"
-                >
-                  <div
-                    class="col"
-                  >
                     <button
                       class="sign-out btn btn-dark-green btn-lg btn-block"
                       type="button"
@@ -206,20 +192,6 @@ exports[`Dashboard Page renders correctly when online 1`] = `
                       href="/medications"
                     >
                       Medications
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="dashboardButton row"
-                >
-                  <div
-                    class="col"
-                  >
-                    <a
-                      class="btn btn-dark-green btn-block btn-lg"
-                      href="/account"
-                    >
-                      Your Account
                     </a>
                   </div>
                 </div>

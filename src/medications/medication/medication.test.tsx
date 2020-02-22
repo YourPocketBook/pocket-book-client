@@ -1,23 +1,11 @@
 import "@testing-library/jest-dom/extend-expect";
-import {
-  fireEvent,
-  render,
-  wait,
-  waitForDomChange,
-  waitForElement
-} from "@testing-library/react";
+import { render, wait } from "@testing-library/react";
 import fetchMock from "fetch-mock";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Medication } from ".";
-import {
-  authenticatedDelete,
-  authenticatedGet
-} from "../../_testSupport/fetch-helpers";
-import {
-  inDateAdminToken,
-  inDateNonAdminToken
-} from "../../_testSupport/tokens";
+import { authenticatedGet } from "../../_testSupport/fetch-helpers";
+import { inDateNonAdminToken } from "../../_testSupport/tokens";
 import { fetcher } from "../../fetcher";
 import { history } from "../../history";
 import { useOnlineStatus } from "../../hooks/useOnlineStatus";
@@ -26,7 +14,6 @@ import { IMedication } from "../../model/medication";
 jest.mock("../../hooks/useOnlineStatus");
 
 const getEndpoint = "/api/get-medication";
-const deleteEndPoint = "/api/delete-medication";
 
 const testDefaultState = {
   adviceIfDeclined: "Test Advice 1",
@@ -149,54 +136,6 @@ describe("Medication Detail Page", () => {
     await wait(() => expect(fetchMock.done()).toBeTruthy());
 
     expect(container).toMatchSnapshot();
-  });
-
-  it("renders results correctly for administrator", async () => {
-    fetcher.saveToken(inDateAdminToken);
-    authenticatedGet(`${getEndpoint}/42`, inDateAdminToken, testDefaultState);
-
-    const { getByText } = render(<Medication id="42" reload={false} />);
-
-    await wait(() => expect(fetchMock.done()).toBeTruthy());
-
-    expect(getByText("Edit Medication")).toBeInTheDocument();
-    expect(getByText("Delete Medication")).toBeInTheDocument();
-  });
-
-  it("renders results correctly for administrator when offline", async () => {
-    fetcher.saveToken(inDateAdminToken);
-    (useOnlineStatus as jest.Mock).mockReturnValue(false);
-
-    localStorage.setItem("medications", JSON.stringify([testDefaultState]));
-
-    const { getByText } = render(<Medication id="42" reload={false} />);
-
-    expect(getByText("Edit Medication")).toHaveClass("disabled");
-    expect(getByText("Delete Medication")).toHaveClass("disabled");
-  });
-
-  it("makes request to delete medication correctly", async () => {
-    fetcher.saveToken(inDateAdminToken);
-    authenticatedGet(`${getEndpoint}/42`, inDateAdminToken, testDefaultState);
-    authenticatedDelete(`${deleteEndPoint}/42`, inDateAdminToken, {
-      status: 204
-    });
-
-    const { getByText, container } = render(
-      <Medication id="42" reload={false} />
-    );
-
-    await waitForDomChange({ container });
-
-    fireEvent.click(getByText("Delete Medication"));
-
-    await waitForElement(() => getByText("Are you sure?"));
-
-    fireEvent.click(getByText("Yes"));
-
-    await wait(() => expect(fetchMock.done()).toBeTruthy());
-
-    expect(history.push).toBeCalledWith("/medications");
   });
 
   it("renders loading correctly", async () => {

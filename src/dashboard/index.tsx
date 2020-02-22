@@ -21,7 +21,6 @@ import styles from "./dashboard.module.scss";
  * This page makes no network requests.
  */
 export function Dashboard() {
-  const isAdmin = fetcher.isAdmin();
   const isOnline = useOnlineStatus();
 
   function onLogoutClick() {
@@ -49,28 +48,6 @@ export function Dashboard() {
                       href="/medications"
                     >
                       Medications
-                    </Link>
-                  </Col>
-                </Row>
-                {isAdmin && (
-                  <Row className={styles.dashboardButton}>
-                    <Col>
-                      <Link
-                        href="/admin"
-                        className="btn btn-dark-green btn-block btn-lg"
-                      >
-                        Administration
-                      </Link>
-                    </Col>
-                  </Row>
-                )}
-                <Row className={styles.dashboardButton}>
-                  <Col>
-                    <Link
-                      className="btn btn-dark-green btn-block btn-lg"
-                      href="/account"
-                    >
-                      Your Account
                     </Link>
                   </Col>
                 </Row>

@@ -1,24 +1,13 @@
 import format from "date-fns/format";
 import parseDate from "date-fns/parseISO";
-import React, { useState } from "react";
-import Button from "reactstrap/lib/Button";
-import ButtonGroup from "reactstrap/lib/ButtonGroup";
+import React from "react";
 import Col from "reactstrap/lib/Col";
-import Modal from "reactstrap/lib/Modal";
-import ModalBody from "reactstrap/lib/ModalBody";
-import ModalFooter from "reactstrap/lib/ModalFooter";
-import ModalHeader from "reactstrap/lib/ModalHeader";
 import Row from "reactstrap/lib/Row";
-import { fetcher } from "../../fetcher";
-import { history } from "../../history";
 import { useMedication } from "../../hooks/useMedications";
-import { useOnlineStatus } from "../../hooks/useOnlineStatus";
 import { Link } from "../../link";
 import { PrivatePage } from "../../private-page";
 import { MarkdownSkeleton } from "./markdown-skeleton";
 import styles from "./medication.module.scss";
-
-const deleteEndPoint = "/api/delete-medication";
 
 /**
  * Component that displays the medication to the user and allows administrators
@@ -37,26 +26,8 @@ const deleteEndPoint = "/api/delete-medication";
  */
 export function Medication({ id, reload }: { id: string; reload: boolean }) {
   const { medication, isLoading, loadFailed } = useMedication(id, reload);
-  const [isBusy, setIsBusy] = useState(false);
 
   let content;
-
-  const isAdmin = fetcher.isAdmin();
-  const isOnline = useOnlineStatus();
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
-
-  function deleteMedication() {
-    setIsBusy(true);
-
-    fetcher
-      .authFetch(`${deleteEndPoint}/${id}`, {
-        method: "DELETE"
-      })
-      .then(() => {
-        setIsBusy(false);
-        history.push("/medications");
-      });
-  }
 
   if (isLoading && !medication) {
     content = <div>Loading...</div>;
@@ -120,45 +91,6 @@ export function Medication({ id, reload }: { id: string; reload: boolean }) {
               )}.`
             : null}
         </footer>
-        {isAdmin ? (
-          <ButtonGroup className="text-center">
-            <Link
-              className="btn btn-dark-green btn-lg"
-              href={`/admin/edit-medication/${id}`}
-              disabled={!isOnline}
-            >
-              Edit Medication
-            </Link>
-            <Button
-              className="btn btn-danger btn-lg"
-              onClick={() => setShowDeleteConfirm(true)}
-              disabled={!isOnline}
-            >
-              Delete Medication
-            </Button>
-          </ButtonGroup>
-        ) : null}
-        <Modal
-          isOpen={showDeleteConfirm}
-          toggle={() => setShowDeleteConfirm(!showDeleteConfirm)}
-        >
-          <ModalHeader>Are you sure?</ModalHeader>
-          <ModalBody>
-            Are you sure you want to delete '{medication.name}'? This cannot be
-            un-done.
-          </ModalBody>
-          <ModalFooter>
-            <Button color="danger" onClick={deleteMedication} disabled={isBusy}>
-              Yes
-            </Button>
-            <Button
-              color="secondary"
-              onClick={() => setShowDeleteConfirm(false)}
-            >
-              No
-            </Button>
-          </ModalFooter>
-        </Modal>
       </React.Fragment>
     );
   }
