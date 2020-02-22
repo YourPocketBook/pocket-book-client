@@ -1,5 +1,5 @@
+import { isFuture, toDate } from "date-fns";
 import { getToken, login, userAgentApplication } from "./ms-login";
-import { toDate, isFuture } from "date-fns";
 
 class Fetcher {
   public async authFetch(
