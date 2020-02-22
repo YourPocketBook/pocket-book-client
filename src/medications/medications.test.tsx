@@ -9,19 +9,19 @@ import { inDateNonAdminToken } from "../_testSupport/tokens";
 import { fetcher } from "../fetcher";
 import { history } from "../history";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
+import { getToken } from "../ms-login";
 
 jest.mock("../hooks/useOnlineStatus");
+jest.mock("../ms-login");
 
 const getEndpoint = "/api/get-medications";
 
 describe("Medications Home", () => {
-  beforeAll(() => {
-    fetcher.saveToken(inDateNonAdminToken);
-  });
-
   beforeEach(() => {
+    (getToken as jest.Mock).mockReturnValue(inDateNonAdminToken);
     history.push = jest.fn();
     (useOnlineStatus as jest.Mock).mockReturnValue(true);
+    fetcher.getName = jest.fn().mockReturnValue("Test User");
   });
 
   afterEach(() => {

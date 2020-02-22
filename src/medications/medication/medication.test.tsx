@@ -10,8 +10,10 @@ import { fetcher } from "../../fetcher";
 import { history } from "../../history";
 import { useOnlineStatus } from "../../hooks/useOnlineStatus";
 import { IMedication } from "../../model/medication";
+import { getToken } from "../../ms-login";
 
 jest.mock("../../hooks/useOnlineStatus");
+jest.mock("../../ms-login");
 
 const getEndpoint = "/api/get-medication";
 
@@ -32,14 +34,15 @@ const testDefaultState = {
 
 describe("Medication Detail Page", () => {
   beforeEach(() => {
-    fetcher.saveToken(inDateNonAdminToken);
+    fetcher.getName = jest.fn().mockReturnValue("Test User");
+    (getToken as jest.Mock).mockReturnValue(inDateNonAdminToken);
+
     history.push = jest.fn();
     (useOnlineStatus as jest.Mock).mockReturnValue(true);
   });
 
   afterEach(() => {
     localStorage.clear();
-    fetcher.clearToken();
   });
 
   it("renders without crashing", () => {
