@@ -2,19 +2,18 @@ import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Dashboard } from ".";
-import { inDateNonAdminToken } from "../_testSupport/tokens";
-import { fetcher } from "../fetcher";
 import { history } from "../history";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { logout } from "../ms-login";
+import { fetcher } from "../fetcher";
 
 jest.mock("../hooks/useOnlineStatus");
 jest.mock("../ms-login");
 
 describe("Dashboard Page", () => {
   beforeEach(() => {
+    fetcher.getName = jest.fn().mockReturnValue("Test User");
     history.push = jest.fn();
-    fetcher.saveToken(inDateNonAdminToken);
     (useOnlineStatus as jest.Mock).mockReturnValue(true);
   });
 

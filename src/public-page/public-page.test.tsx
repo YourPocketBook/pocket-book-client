@@ -2,14 +2,12 @@ import { render } from "@testing-library/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { PublicPage } from ".";
-import { expiredToken, inDateNonAdminToken } from "../_testSupport/tokens";
 import { fetcher } from "../fetcher";
 import { history } from "../history";
 
 describe("Public Page", () => {
   beforeEach(() => {
     history.push = jest.fn();
-    fetcher.clearToken();
   });
 
   it("renders without crashing", () => {
@@ -24,6 +22,8 @@ describe("Public Page", () => {
   });
 
   it("does not redirect if no token is present", () => {
+    fetcher.hasToken = jest.fn().mockReturnValue(false);
+
     const { container } = render(
       <PublicPage>
         <div>Test</div>
@@ -35,7 +35,8 @@ describe("Public Page", () => {
   });
 
   it("does not redirect if token has expired", () => {
-    fetcher.saveToken(expiredToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(false);
 
     render(
       <PublicPage>
@@ -44,11 +45,11 @@ describe("Public Page", () => {
     );
 
     expect(history.push).not.toBeCalled();
-    expect(fetcher.hasToken()).toBeFalsy();
   });
 
   it("redirects to home if token is in-date", async () => {
-    fetcher.saveToken(inDateNonAdminToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(true);
 
     render(
       <PublicPage>
