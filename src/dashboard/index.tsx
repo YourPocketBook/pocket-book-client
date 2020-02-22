@@ -3,7 +3,6 @@ import Button from "reactstrap/lib/Button";
 import Col from "reactstrap/lib/Col";
 import Container from "reactstrap/lib/Container";
 import Row from "reactstrap/lib/Row";
-import { fetcher } from "../fetcher";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { Link } from "../link";
 import { logout } from "../ms-login";
@@ -24,7 +23,6 @@ export function Dashboard() {
   const isOnline = useOnlineStatus();
 
   function onLogoutClick() {
-    fetcher.clearToken();
     logout();
   }
 

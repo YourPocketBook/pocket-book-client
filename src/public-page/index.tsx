@@ -10,6 +10,7 @@ import NavItem from "reactstrap/lib/NavItem";
 import Row from "reactstrap/lib/Row";
 import { fetcher } from "../fetcher";
 import { history } from "../history";
+import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { Link } from "../link";
 import styles from "./public-page.module.scss";
 
@@ -19,13 +20,13 @@ import styles from "./public-page.module.scss";
  * If the user has a valid token then they will be redirected to the home page.
  */
 export function PublicPage({ children }: { children: React.ReactNode }) {
+  const isOnline = useOnlineStatus();
+
   useEffect(() => {
-    if (fetcher.isInDate()) {
+    if (fetcher.isInDate() || (fetcher.hasToken() && !isOnline)) {
       history.push("/home");
-    } else {
-      fetcher.clearToken();
     }
-  }, []);
+  }, [isOnline]);
 
   return (
     <div className={styles.background}>

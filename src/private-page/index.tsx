@@ -1,14 +1,14 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import React from "react";
 import Nav from "reactstrap/lib/Nav";
 import Navbar from "reactstrap/lib/Navbar";
 import NavbarBrand from "reactstrap/lib/NavbarBrand";
 import NavItem from "reactstrap/lib/NavItem";
 import { fetcher } from "../fetcher";
-import { history } from "../history";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { Link } from "../link";
+import { login } from "../ms-login";
 import styles from "./private-page.module.scss";
 
 /**
@@ -26,17 +26,14 @@ export function PrivatePage({
   children: React.ReactNode;
 }) {
   const isOnline = useOnlineStatus();
-  const [name, setName] = useState(fetcher.getName());
-  fetcher.setNameChangeHandler(setName);
+  const name = fetcher.getName();
 
   useEffect(() => {
     if (fetcher.isInDate() || (fetcher.hasToken() && !isOnline)) {
       return;
     }
 
-    fetcher.clearToken();
-    history.push("/login");
-    return () => fetcher.setNameChangeHandler();
+    login();
   }, [isOnline]);
 
   const contentTag = !!contentDate ? (
