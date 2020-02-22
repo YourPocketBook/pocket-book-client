@@ -1,103 +1,33 @@
-import { inDateAdminToken, inDateNonAdminToken } from "./_testSupport/tokens";
 import { Fetcher } from "./fetcher";
+import { getToken, login, userAgentApplication } from "./ms-login";
+
+jest.mock("./ms-login");
 
 describe("Authenticated Fetcher", () => {
-  beforeEach(() => {
-    localStorage.clear();
-  });
-
-  it("automatically loads a token from storage when constructed", () => {
-    localStorage.setItem("token", inDateNonAdminToken);
+  it("redirects to login if an authenticated request is made without a token", async () => {
+    (getToken as jest.Mock).mockResolvedValue("");
 
     const fetcher = new Fetcher();
-
-    expect(fetcher.hasToken()).toBeTruthy();
-    expect(fetcher.getName()).toBe("Test User");
-    expect(fetcher.isAdmin()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeTruthy();
+    try {
+      await fetcher.authFetch("/test/uri");
+      fail();
+    }
+    catch (error) {
+      expect(error).toEqual("No token");
+      expect(login).toBeCalled();
+    }
   });
 
-  it("handles not having a token in storage when constructed", () => {
+  it("returns the user's name from MSAL when getName is called", () => {
     const fetcher = new Fetcher();
+    const userName = "Test User";
 
-    expect(fetcher.hasToken()).toBeFalsy();
-    expect(fetcher.getName()).toBe("");
-    expect(fetcher.isAdmin()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeFalsy();
-  });
+    (userAgentApplication.getAccount as jest.Mock).mockReturnValue({
+      name: userName
+    });
 
-  it("handles having an invalid token in storage when constructed", () => {
-    localStorage.setItem("token", "badToken");
+    const actual = fetcher.getName();
 
-    const fetcher = new Fetcher();
-
-    expect(fetcher.hasToken()).toBeFalsy();
-    expect(fetcher.getName()).toBe("");
-    expect(fetcher.isAdmin()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeFalsy();
-    expect(localStorage.getItem("token")).toBeNull();
-  });
-
-  it("updates token when saveToken is called", () => {
-    const fetcher = new Fetcher();
-    fetcher.saveToken(inDateNonAdminToken);
-
-    expect(fetcher.hasToken()).toBeTruthy();
-    expect(fetcher.getName()).toBe("Test User");
-    expect(fetcher.isAdmin()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeTruthy();
-
-    fetcher.saveToken(inDateAdminToken);
-
-    expect(fetcher.hasToken()).toBeTruthy();
-    expect(fetcher.getName()).toBe("Test User");
-    expect(fetcher.isAdmin()).toBeTruthy();
-    expect(fetcher.isInDate()).toBeTruthy();
-  });
-
-  it("calls name change handler with new token", () => {
-    const mock = jest.fn();
-
-    const fetcher = new Fetcher();
-    fetcher.setNameChangeHandler(mock);
-    fetcher.saveToken(inDateNonAdminToken);
-
-    expect(mock).toBeCalledWith("Test User");
-  });
-
-  it("calls name change handler with new name", () => {
-    const mock = jest.fn();
-
-    const fetcher = new Fetcher();
-    fetcher.saveToken(inDateNonAdminToken);
-    fetcher.setNameChangeHandler(mock);
-    fetcher.updateName("New Name");
-
-    expect(mock).toBeCalledWith("New Name");
-  });
-
-  it("clears token if an invalid one is passed", () => {
-    const fetcher = new Fetcher();
-    fetcher.saveToken(inDateNonAdminToken);
-    expect(fetcher.hasToken()).toBeTruthy();
-
-    fetcher.saveToken("BadToken");
-    expect(fetcher.hasToken()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeFalsy();
-  });
-
-  it("clears token if clearToken is called", () => {
-    const fetcher = new Fetcher();
-    fetcher.saveToken(inDateNonAdminToken);
-    expect(fetcher.hasToken()).toBeTruthy();
-
-    fetcher.clearToken();
-    expect(fetcher.hasToken()).toBeFalsy();
-    expect(fetcher.isInDate()).toBeFalsy();
-  });
-
-  it("throws if an authenticated request is made without a token", () => {
-    const fetcher = new Fetcher();
-    expect(() => fetcher.authFetch("/test/uri")).toThrow("No token");
+    expect(actual).toEqual(userName);
   });
 });

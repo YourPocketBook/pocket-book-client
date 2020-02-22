@@ -2,19 +2,22 @@ import { render } from "@testing-library/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { PrivatePage } from ".";
-import { expiredToken, inDateNonAdminToken } from "../_testSupport/tokens";
 import { fetcher } from "../fetcher";
 import { history } from "../history";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
+import { login } from "../ms-login";
 
+jest.mock("../ms-login");
+jest.mock("../fetcher");
 jest.mock("../hooks/useOnlineStatus");
 
 describe("Private Page", () => {
   beforeEach(() => {
-    fetcher.clearToken();
-    history.push = jest.fn();
-    (useOnlineStatus as jest.Mock).mockReset();
+    fetcher.getName = jest.fn().mockReturnValue("Test User");
     (useOnlineStatus as jest.Mock).mockReturnValue(true);
+  });
+  afterEach(() => {
+    (login as jest.Mock).mockClear();
   });
 
   it("renders without crashing", () => {
@@ -35,7 +38,7 @@ describe("Private Page", () => {
       </PrivatePage>
     );
 
-    expect(history.push).toBeCalledWith("/login");
+    expect(login).toBeCalled();
   });
 
   it("redirects to the login page if no token is present when offline", () => {
@@ -47,11 +50,12 @@ describe("Private Page", () => {
       </PrivatePage>
     );
 
-    expect(history.push).toBeCalledWith("/login");
+    expect(login).toBeCalled();
   });
 
   it("redirects to the login page if token has expired and user is online", () => {
-    fetcher.saveToken(expiredToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(false);
 
     render(
       <PrivatePage>
@@ -59,14 +63,13 @@ describe("Private Page", () => {
       </PrivatePage>
     );
 
-    expect(history.push).toBeCalledWith("/login");
-    expect(fetcher.hasToken()).toBeFalsy();
+    expect(login).toBeCalled();
   });
 
   it("does not redirect to the login page if token has expired and user is offline", () => {
     (useOnlineStatus as jest.Mock).mockReturnValue(false);
-
-    fetcher.saveToken(expiredToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(false);
 
     render(
       <PrivatePage>
@@ -74,12 +77,12 @@ describe("Private Page", () => {
       </PrivatePage>
     );
 
-    expect(history.push).not.toBeCalledWith("/login");
-    expect(fetcher.checkToken(expiredToken)).toBeTruthy();
+    expect(login).not.toBeCalledWith();
   });
 
   it("passes real name to content if token is in-date when online", async () => {
-    fetcher.saveToken(inDateNonAdminToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(true);
 
     const { container } = render(
       <PrivatePage>
@@ -88,11 +91,11 @@ describe("Private Page", () => {
     );
 
     expect(container).toMatchSnapshot();
-    expect(history.push).not.toBeCalled();
   });
 
   it("renders SJA copyright correctly", async () => {
-    fetcher.saveToken(inDateNonAdminToken);
+    fetcher.hasToken = jest.fn().mockReturnValue(true);
+    fetcher.isInDate = jest.fn().mockReturnValue(true);
 
     const { container } = render(
       <PrivatePage contentDate="2018">
@@ -101,6 +104,6 @@ describe("Private Page", () => {
     );
 
     expect(container).toMatchSnapshot();
-    expect(history.push).not.toBeCalled();
+    expect(login).not.toBeCalledWith();
   });
 });
