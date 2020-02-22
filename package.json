@@ -31,6 +31,7 @@
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
     "lint-staged": "^9.5.0",
+    "msal": "^1.2.1",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.1",
     "path-to-regexp": "^6.1.0",

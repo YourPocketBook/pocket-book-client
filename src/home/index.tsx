@@ -1,9 +1,11 @@
 import React from "react";
+import Button from "reactstrap/lib/Button";
 import Col from "reactstrap/lib/Col";
 import Container from "reactstrap/lib/Container";
 import Row from "reactstrap/lib/Row";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { Link } from "../link";
+import { login } from "../ms-login";
 import { OfflineNotice } from "../offlineNotice";
 import { PublicPage } from "../public-page";
 import "../styles/button.scss";
@@ -51,14 +53,14 @@ export function Home() {
             </Link>
           </Col>
           <Col sm={{ size: 4 }}>
-            <Link
+            <Button
               className="btn btn-dark-green btn-block"
               disabled={!isOnline}
-              href="/login"
+              onClick={() => login()}
               id="log-in-button"
             >
               Log In
-            </Link>
+            </Button>
           </Col>
         </Row>
       </Container>

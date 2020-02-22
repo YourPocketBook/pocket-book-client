@@ -1,7 +1,7 @@
 import "react-app-polyfill/ie11";
-import 'react-app-polyfill/stable';
+import "react-app-polyfill/stable";
 
-import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only';
+import "abortcontroller-polyfill/dist/abortcontroller-polyfill-only";
 
 import { Location } from "history";
 import React from "react";
@@ -16,6 +16,7 @@ import { history } from "./history";
 import { Home } from "./home";
 import "./index.css";
 import { Login } from "./login";
+import { LoginError } from "./login-error";
 import { Medications } from "./medications";
 import { EditMedication } from "./medications/edit-medication";
 import { Medication } from "./medications/medication";
@@ -87,7 +88,8 @@ const routes: IRoute[] = [
     path: "/account"
   },
   { path: "/forgot-password", action: () => <ForgotPassword /> },
-  { path: "/forgot-password-done", action: () => <ForgotPasswordDone /> }
+  { path: "/forgot-password-done", action: () => <ForgotPasswordDone /> },
+  { path: "/login-error", action: () => <LoginError /> }
 ];
 
 function render(location: Location) {

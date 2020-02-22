@@ -4,9 +4,9 @@ import Col from "reactstrap/lib/Col";
 import Container from "reactstrap/lib/Container";
 import Row from "reactstrap/lib/Row";
 import { fetcher } from "../fetcher";
-import { history } from "../history";
 import { useOnlineStatus } from "../hooks/useOnlineStatus";
 import { Link } from "../link";
+import { logout } from "../ms-login";
 import { OfflineNotice } from "../offlineNotice";
 import { PrivatePage } from "../private-page";
 import styles from "./dashboard.module.scss";
@@ -26,7 +26,7 @@ export function Dashboard() {
 
   function onLogoutClick() {
     fetcher.clearToken();
-    history.push("/");
+    logout();
   }
 
   return (
