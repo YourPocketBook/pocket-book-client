@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 const workboxBuild = require("workbox-build");
 // NOTE: This should be run *AFTER* all your assets are built
 const buildSW = () => {
